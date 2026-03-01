@@ -133,14 +133,24 @@
         }
 
         .nav-brand {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.25rem;
-            font-weight: 400;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--text);
+            display: flex;
+            align-items: center;
             text-decoration: none;
+            flex-shrink: 0;
         }
+
+        .nav-logo {
+            height: 50px;
+            width: auto;
+            display: block;
+            mix-blend-mode: multiply;
+        }
+
+        /* Black-and-white logo hidden by default; shown when navbar is scrolled */
+        .nav-logo-bw { display: none; }
+
+        nav.scrolled .nav-logo-color { display: none; }
+        nav.scrolled .nav-logo-bw   { display: block; }
 
         .nav-links {
             display: flex;
@@ -784,12 +794,16 @@
         }
 
         .footer-brand {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem;
-            font-weight: 400;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo {
+            height: 80px;
+            width: auto;
+            display: block;
+            mix-blend-mode: multiply;
         }
 
         .footer-copy {
@@ -902,7 +916,16 @@
 
 <!-- ═══ NAVIGATION ══════════════════════════════════════ -->
 <nav id="navbar">
-    <a href="#hero" class="nav-brand">Brandon Franks Pottery</a>
+    <a href="#hero" class="nav-brand">
+        <img src="Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
+             alt="Brandon Franks Pottery"
+             class="nav-logo nav-logo-color"
+             height="50">
+        <img src="Pottery%202026%20Website%20Photos/BrandonFranksLogoBlackWhite.png"
+             alt="Brandon Franks Pottery"
+             class="nav-logo nav-logo-bw"
+             height="50">
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
     </button>
@@ -1044,7 +1067,11 @@
 
 <!-- ═══ FOOTER ════════════════════════════════════════════ -->
 <footer>
-    <span class="footer-brand">Brandon Franks Pottery</span>
+    <span class="footer-brand">
+        <img src="Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
+             alt="Brandon Franks Pottery"
+             class="footer-logo">
+    </span>
     <span class="footer-copy">&copy; 2026 &nbsp;All Rights Reserved</span>
     <span class="footer-shop">
         <a href="https://www.etsy.com/shop/BrandonFranksPottery" target="_blank" rel="noopener">
