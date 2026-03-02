@@ -6,3 +6,5 @@
 !.gitignore
 !Pottery 2026 Website Photos/
 !Pottery 2026 Website Photos/**
+!blog/
+!blog/**

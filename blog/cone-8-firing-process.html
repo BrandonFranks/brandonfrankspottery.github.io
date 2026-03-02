@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside the Cone 8 Firing Process — Brandon Franks Pottery</title>
+    <meta name="description" content="A detailed look at the Cone 8 firing schedule used for crystalline glazes — from peak temperature to the slow, critical cooling that grows the crystals.">
+    <link rel="canonical" href="https://brandonfrankspottery.com/blog/cone-8-firing-process.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream:  #faf6f0;
+            --brown:  #2C1810;
+            --gold:   #c9a96e;
+            --muted:  #7a5c3a;
+            --rule:   rgba(201,169,110,0.4);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--cream);
+            color: var(--brown);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        .blog-masthead {
+            background: var(--cream);
+            border-bottom: 1px solid var(--rule);
+            text-align: center;
+        }
+
+        .blog-masthead-topnav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3rem;
+            height: 42px;
+        }
+
+        .blog-back {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.25s;
+        }
+
+        .blog-back::before { content: '←'; }
+        .blog-back:hover   { color: var(--gold); }
+
+        .blog-site-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+
+        .blog-site-link:hover { color: var(--gold); }
+
+        .masthead-rule { height: 1px; background: var(--gold); }
+
+        .masthead-logo-link {
+            display: block;
+            padding-top: 14px;
+            line-height: 0;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .masthead-logo-img { height: 90px; width: auto; display: inline-block; }
+
+        .masthead-wordmark {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: var(--brown);
+            letter-spacing: 4px;
+            text-align: center;
+            padding-bottom: 10px;
+            margin-top: 4px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .post-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 5rem 2rem 7rem;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .post-date, .post-author {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .post-meta-sep { width: 1px; height: 12px; background: rgba(201,169,110,0.4); }
+
+        .post-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 400;
+            color: var(--brown);
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+            margin-bottom: 2rem;
+        }
+
+        .post-rule { width: 52px; height: 1px; background: var(--gold); opacity: 0.6; margin-bottom: 3rem; }
+
+        .post-body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.93rem;
+            line-height: 2;
+            color: #4a2c1a;
+            font-weight: 300;
+        }
+
+        .post-body p + p { margin-top: 1.8rem; }
+        .post-body strong { font-weight: 500; color: var(--brown); }
+
+        .blog-footer {
+            background: #0f0604;
+            padding: 2rem 3rem;
+            border-top: 1px solid rgba(201,169,110,0.14);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .blog-footer-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .blog-footer-copy {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(138,128,112,0.4);
+        }
+
+        @media (max-width: 600px) {
+            .blog-masthead-topnav { padding: 0 1.5rem; }
+            .masthead-wordmark    { font-size: 24px; }
+            .blog-footer          { flex-direction: column; text-align: center; padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="blog-masthead">
+    <div class="blog-masthead-topnav">
+        <a href="../blog" class="blog-back">All Posts</a>
+        <a href="../index.html" class="blog-site-link">brandonfrankspottery.com</a>
+    </div>
+    <div class="masthead-rule"></div>
+    <a href="../index.html" class="masthead-logo-link">
+        <img src="../Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
+             alt="Brandon Franks Pottery"
+             class="masthead-logo-img">
+    </a>
+    <a href="../index.html" class="masthead-wordmark">Brandon Franks Pottery</a>
+    <div class="masthead-rule"></div>
+</header>
+
+<main class="post-wrap">
+    <div class="post-meta">
+        <span class="post-date">February 3, 2026</span>
+        <div class="post-meta-sep"></div>
+        <span class="post-author">Brandon Franks</span>
+    </div>
+    <h1 class="post-title">Inside the Cone 8 Firing Process</h1>
+    <div class="post-rule"></div>
+    <div class="post-body">
+        <p>Every crystalline piece I make goes through a precisely controlled Cone 8 firing — a 12 to 18 hour process where temperature is everything. "Cone 8" refers to a pyrometric cone, a small ceramic pyramid placed inside the kiln that bends and melts at a specific temperature, giving potters a reliable indicator that their target heat has been reached. For crystalline glazes, Cone 8 corresponds to roughly 2,300°F — hot enough to fully melt the glaze into a flowing liquid and drive out any remaining organic material from the clay body.</p>
+        <p>The climb to peak temperature follows a carefully programmed schedule. The kiln rises slowly through the early stages to allow moisture to escape from the clay without cracking it, then accelerates through the mid-range, and finally slows again as it approaches peak. At peak temperature, the glaze is fully molten — so fluid that it would run off the piece entirely without the catch basin beneath it. This is also when the zinc oxide and silica in the glaze are fully dissolved into the liquid, and the conditions for crystal growth are set. The kiln is held at peak for a short window — typically 15 to 30 minutes — before the real work begins.</p>
+        <p>The descent is where crystalline glazes diverge completely from conventional pottery firing. Instead of cooling freely, the kiln is programmed to drop quickly to the crystal-nucleation zone — roughly 1,850°F — and then slow dramatically. This is the growth window: the temperature range where zinc silicate molecules have just enough energy to move and bond, but not so much that they stay dissolved. I typically hold the kiln within this window for three to four hours, sometimes longer, depending on the glaze chemistry and how large I want the crystals to grow. The longer the hold, the larger and more complex the formations tend to become — but holding too long can cause the crystals to lose definition or the background glaze to devitrify.</p>
+        <p>After the growth hold, the kiln drops again to a second, lower hold before finally cooling to room temperature. The entire firing is logged by a digital controller that records temperature and time in fine increments. Even so, no two firings produce the same results. The same schedule, the same glaze, the same clay can produce completely different crystals depending on atmospheric conditions inside the kiln, minor variations in material chemistry, or small differences in how the pieces were loaded. That unpredictability is what makes every opening of the kiln feel genuinely surprising — and what makes this work worth doing.</p>
+    </div>
+</main>
+
+<footer class="blog-footer">
+    <span class="blog-footer-brand">Brandon Franks Pottery</span>
+    <span class="blog-footer-copy">&copy; 2026 All Rights Reserved</span>
+</footer>
+
+</body>
+</html>
