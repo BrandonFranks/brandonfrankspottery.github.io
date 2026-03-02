@@ -1191,16 +1191,23 @@
                 <a href="mailto:brandonfrankspottery@gmail.com" class="contact-link">brandonfrankspottery@gmail.com</a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="contact-link">Instagram</a>
             </div>
-            <form class="contact-form reveal" action="https://formspree.io/f/mzdaqqja" method="POST">
-                <input type="hidden" name="_replyto" value="brandonfrankspottery@gmail.com">
-                <input type="hidden" name="_subject" value="New message from brandonfrankspottery.com">
+            <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mzdaqqja" method="POST">
+                <input type="hidden" name="_replyto"  value="brandonfrankspottery@gmail.com">
+                <input type="hidden" name="_subject"  value="New message from brandonfrankspottery.com">
+                <input type="hidden" name="_next"     value="false">
                 <input type="text"  name="name"    placeholder="Name"    required>
                 <input type="email" name="email"   placeholder="Email"   required>
                 <textarea           name="message" placeholder="Message" required></textarea>
                 <div class="contact-submit-wrap">
-                    <button type="submit" class="contact-submit">Send Message</button>
+                    <button type="submit" class="contact-submit" id="contactSubmit">Send Message</button>
                 </div>
             </form>
+            <div id="contactSuccess" style="display:none; text-align:center; padding: 3rem 0;">
+                <p style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; color:var(--gold); letter-spacing:0.04em; line-height:1.5;">Thank you for reaching out.<br>I'll be in touch soon.</p>
+            </div>
+            <div id="contactError" style="display:none; text-align:center; padding: 1.5rem 0;">
+                <p style="font-family:'Montserrat',sans-serif; font-size:0.72rem; letter-spacing:0.12em; color:var(--text-muted);">Something went wrong — please try again.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -1332,6 +1339,38 @@
         });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ─── CONTACT FORM ──────────────────────────────── */
+    const contactForm    = document.getElementById('contactForm');
+    const contactSuccess = document.getElementById('contactSuccess');
+    const contactError   = document.getElementById('contactError');
+    const contactSubmit  = document.getElementById('contactSubmit');
+
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        contactError.style.display = 'none';
+        contactSubmit.disabled = true;
+        contactSubmit.textContent = 'Sending…';
+
+        try {
+            const res = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+                contactForm.style.display = 'none';
+                contactSuccess.style.display = 'block';
+            } else {
+                throw new Error('server error');
+            }
+        } catch (_) {
+            contactError.style.display = 'block';
+            contactSubmit.disabled = false;
+            contactSubmit.textContent = 'Send Message';
+        }
+    });
 </script>
 </body>
 </html>
