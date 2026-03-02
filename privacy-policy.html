@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Brandon Franks Pottery</title>
+    <meta name="description" content="Privacy policy for brandonfrankspottery.com">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream:  #faf6f0;
+            --brown:  #2C1810;
+            --gold:   #c9a96e;
+            --muted:  #7a5c3a;
+            --text:   #4a2c1a;
+            --rule:   rgba(201,169,110,0.4);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--cream);
+            color: var(--brown);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        /* ─── MASTHEAD ──────────────────────────────── */
+        .blog-masthead {
+            background: var(--cream);
+            border-bottom: 1px solid var(--rule);
+            text-align: center;
+        }
+
+        .blog-masthead-topnav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3rem;
+            height: 42px;
+        }
+
+        .blog-back {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.25s;
+        }
+
+        .blog-back::before { content: '←'; }
+        .blog-back:hover   { color: var(--gold); }
+
+        .blog-site-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+
+        .blog-site-link:hover { color: var(--gold); }
+
+        .masthead-rule { height: 1px; background: var(--gold); }
+
+        .masthead-identity {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            padding: 6px 0;
+        }
+
+        .masthead-logo-link {
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 0;
+            text-decoration: none;
+        }
+
+        .masthead-logo-img { height: 90px; width: auto; display: block; }
+
+        .masthead-wordmark {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 44px;
+            font-weight: 400;
+            color: var(--brown);
+            letter-spacing: 4px;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+        }
+
+        .masthead-topnav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 3rem;
+            height: 42px;
+        }
+
+        .masthead-nav-list {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .masthead-nav-list a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--brown);
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        .masthead-nav-list a:hover { color: var(--gold); }
+
+        /* ─── PAGE CONTENT ──────────────────────────── */
+        .policy-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 5rem 2rem 7rem;
+        }
+
+        .policy-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 400;
+            color: var(--brown);
+            letter-spacing: 0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+
+        .policy-rule {
+            width: 52px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.6;
+            margin-bottom: 3rem;
+        }
+
+        .policy-section { margin-bottom: 2.8rem; }
+
+        .policy-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: var(--brown);
+            letter-spacing: 0.03em;
+            margin-bottom: 0.9rem;
+        }
+
+        .policy-section p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            line-height: 1.95;
+            color: var(--text);
+            font-weight: 300;
+        }
+
+        .policy-section p + p { margin-top: 1rem; }
+
+        .policy-section a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(201,169,110,0.35);
+            transition: color 0.25s, border-color 0.25s;
+        }
+
+        .policy-section a:hover {
+            color: var(--brown);
+            border-bottom-color: var(--brown);
+        }
+
+        /* ─── FOOTER ────────────────────────────────── */
+        .blog-footer {
+            background: #0f0604;
+            padding: 2rem 3rem;
+            border-top: 1px solid rgba(201,169,110,0.14);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .blog-footer-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .blog-footer-copy {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(138,128,112,0.4);
+        }
+
+        @media (max-width: 900px) {
+            .masthead-nav-list   { display: none; }
+            .masthead-wordmark   { font-size: 26px; letter-spacing: 2px; }
+            .masthead-logo-img   { height: 60px; }
+            .masthead-identity   { min-height: 60px; }
+            .masthead-logo-link  { left: 1rem; }
+            .blog-masthead-topnav { padding: 0 1.5rem; }
+        }
+
+        @media (max-width: 600px) {
+            .blog-footer { flex-direction: column; text-align: center; padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="blog-masthead">
+    <div class="blog-masthead-topnav">
+        <a href="../index.html" class="blog-back">Home</a>
+        <a href="../index.html" class="blog-site-link">brandonfrankspottery.com</a>
+    </div>
+    <div class="masthead-rule"></div>
+    <div class="masthead-identity">
+        <a href="../index.html" class="masthead-logo-link">
+            <img src="Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
+                 alt="Brandon Franks Pottery"
+                 class="masthead-logo-img">
+        </a>
+        <a href="../index.html" class="masthead-wordmark">Brandon Franks Pottery</a>
+    </div>
+    <div class="masthead-rule"></div>
+    <nav class="masthead-topnav">
+        <ul class="masthead-nav-list">
+            <li><a href="../index.html#gallery">Gallery</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#crystalline">Crystalline</a></li>
+            <li><a href="https://www.etsy.com/shop/BrandonFranksPottery" target="_blank" rel="noopener">Shop</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="policy-wrap">
+    <h1 class="policy-title">Privacy Policy</h1>
+    <p class="policy-subtitle">brandonfrankspottery.com</p>
+    <div class="policy-rule"></div>
+
+    <div class="policy-section">
+        <h2>What Information Is Collected</h2>
+        <p>This site collects only the information you voluntarily submit through the contact form: your name, email address, and message. No other personal data is collected. There are no accounts, no logins, and no tracking tied to your identity.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>How Your Information Is Used</h2>
+        <p>Contact form submissions are used solely to respond to your inquiry. Your name and email are never sold, rented, shared with third parties for marketing purposes, or used for any purpose beyond the conversation you initiated.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>Third-Party Services</h2>
+        <p><strong>Formspree</strong> — Contact form submissions are processed by <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree</a>, a third-party form handling service. When you submit the contact form, your data is transmitted to Formspree's servers and then forwarded to this site's email address. Formspree's own privacy policy governs how they handle that data in transit.</p>
+        <p><strong>Pinterest</strong> — This site uses Pinterest's domain verification tag. Pinterest may collect limited data in accordance with their <a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" rel="noopener">privacy policy</a> if you interact with Pinterest features on or off this site.</p>
+        <p><strong>Google Fonts</strong> — Fonts are loaded from Google's servers, which may log your IP address as part of standard request handling. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> for details.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>Cookies and Analytics</h2>
+        <p>This site does not use cookies for tracking or advertising. Basic analytics may be collected by GitHub Pages (the hosting platform) as part of standard server logging. No behavioral tracking, remarketing pixels, or advertising cookies are used on this site.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>Data Retention</h2>
+        <p>Contact form submissions are retained only as long as needed to respond to your inquiry and are not stored in any database on this site. Formspree's retention policies apply to data processed through their service.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>Your Rights</h2>
+        <p>You may request that any information you submitted through the contact form be deleted by emailing <a href="mailto:brandonfrankspottery@gmail.com">brandonfrankspottery@gmail.com</a>. This site does not collect enough data to warrant formal data subject access request procedures, but any reasonable request will be honored promptly.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>Contact</h2>
+        <p>Questions about this privacy policy can be directed to <a href="mailto:brandonfrankspottery@gmail.com">brandonfrankspottery@gmail.com</a>.</p>
+        <p>This policy was last updated March 2026.</p>
+    </div>
+</main>
+
+<footer class="blog-footer">
+    <span class="blog-footer-brand">Brandon Franks Pottery</span>
+    <span class="blog-footer-copy">&copy; 2026 All Rights Reserved</span>
+</footer>
+
+</body>
+</html>
