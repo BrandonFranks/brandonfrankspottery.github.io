@@ -1191,7 +1191,7 @@
                 <a href="mailto:brandonfrankspottery@gmail.com" class="contact-link">brandonfrankspottery@gmail.com</a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="contact-link">Instagram</a>
             </div>
-            <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mzdaqqja" method="POST">
+            <form class="contact-form reveal" id="contactForm">
                 <input type="hidden" name="_replyto"  value="brandonfrankspottery@gmail.com">
                 <input type="hidden" name="_subject"  value="New message from brandonfrankspottery.com">
                 <input type="hidden" name="_next"     value="false">
@@ -1353,7 +1353,7 @@
         contactSubmit.textContent = 'Sending…';
 
         try {
-            const res = await fetch(contactForm.action, {
+            const res = await fetch('https://formspree.io/f/mzdaqqja', {
                 method: 'POST',
                 body: new FormData(contactForm),
                 headers: { 'Accept': 'application/json' }
