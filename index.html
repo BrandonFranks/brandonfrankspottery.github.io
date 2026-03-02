@@ -145,29 +145,37 @@
 
         .masthead-rule { height: 1px; background: var(--gold); }
 
+        .masthead-identity {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            padding: 6px 0;
+        }
+
         .masthead-logo-link {
-            display: block;
-            padding-top: 9px;
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
             line-height: 0;
             text-decoration: none;
-            text-align: center;
         }
 
         .masthead-logo-img {
-            height: 70px;
+            height: 90px;
             width: auto;
-            display: inline-block;
+            display: block;
         }
 
         .masthead-wordmark {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
+            font-size: 44px;
             font-weight: 400;
             color: var(--brown);
             letter-spacing: 4px;
             text-align: center;
-            padding-bottom: 5px;
-            margin-top: 2px;
             display: block;
             text-decoration: none;
         }
@@ -943,8 +951,10 @@
         @media (max-width: 900px) {
             .masthead-nav-list  { display: none; }
             .masthead-hamburger { display: flex; }
-            .masthead-wordmark  { font-size: 20px; letter-spacing: 2px; }
-            .masthead-logo-img  { height: 50px; }
+            .masthead-wordmark  { font-size: 26px; letter-spacing: 2px; }
+            .masthead-logo-img  { height: 60px; }
+            .masthead-identity  { min-height: 60px; }
+            .masthead-logo-link { left: 1rem; }
 
             .container { padding: 0 2rem; }
             section    { padding: 6rem 0; }
@@ -976,12 +986,14 @@
 <!-- ═══ MASTHEAD ═══════════════════════════════════════ -->
 <header id="masthead">
     <div class="masthead-rule"></div>
-    <a href="#hero" class="masthead-logo-link">
-        <img src="Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
-             alt="Brandon Franks Pottery"
-             class="masthead-logo-img">
-    </a>
-    <a href="#hero" class="masthead-wordmark">Brandon Franks Pottery</a>
+    <div class="masthead-identity">
+        <a href="#hero" class="masthead-logo-link">
+            <img src="Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
+                 alt="Brandon Franks Pottery"
+                 class="masthead-logo-img">
+        </a>
+        <a href="#hero" class="masthead-wordmark">Brandon Franks Pottery</a>
+    </div>
     <div class="masthead-rule"></div>
     <nav class="masthead-topnav">
         <ul class="masthead-nav-list">
