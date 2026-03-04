@@ -32,7 +32,7 @@
         "jobTitle": "Ceramic Artist",
         "description": "Brandon Franks is a ceramic artist specializing in crystalline glazes. He began throwing pottery at age 9 and has focused exclusively on crystalline work since 2019.",
         "url": "https://brandonfrankspottery.com",
-        "sameAs": ["https://www.etsy.com/shop/BrandonFranksPottery"],
+        "sameAs": ["https://www.etsy.com/shop/BrandonFranksPottery", "https://www.instagram.com/brandonfrankspottery"],
         "knowsAbout": ["Crystalline glazes", "Ceramics", "Zinc silicate crystal formation", "Kiln firing", "Pottery"]
       },
       {
@@ -50,6 +50,8 @@
           "url": "https://www.etsy.com/shop/BrandonFranksPottery",
           "availability": "https://schema.org/InStock",
           "priceCurrency": "USD",
+          "price": "110.00",
+          "priceValidUntil": "2027-01-01",
           "seller": { "@type": "Person", "name": "Brandon Franks" }
         }
       }
@@ -58,6 +60,7 @@
 
     <meta name="p:domain_verify" content="7003c34787848a610fcc9a9c0a400680"/>
 
+    <link rel="preload" as="image" href="Pottery%202026%20Website%20Photos/DSC_8920.jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -134,7 +137,7 @@
 
         .masthead-nav-list a {
             font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 500;
             letter-spacing: 3px;
             text-transform: uppercase;
@@ -234,6 +237,10 @@
 
         .masthead-mobile-dropdown a:hover { color: var(--gold); }
 
+        /* ─── MASTHEAD SPACER ───────────────────────── */
+        #masthead-spacer { min-height: 146px; }
+        @media (max-width: 900px) { #masthead-spacer { min-height: 116px; } }
+
         /* ─── SECTIONS ──────────────────────────────── */
         section {
             padding: 8rem 0;
@@ -252,17 +259,18 @@
             scroll-margin-top: 0;
         }
 
-        .hero-bg {
+        .hero-bg-img {
             position: absolute;
             inset: 0;
-            background-image: url('Pottery%202026%20Website%20Photos/DSC_8920.jpeg');
-            background-size: cover;
-            background-position: center 40%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
             transform: scale(1.08);
             transition: transform 10s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        #hero.loaded .hero-bg { transform: scale(1.0); }
+        #hero.loaded .hero-bg-img { transform: scale(1.0); }
 
         .hero-overlay {
             position: absolute;
@@ -312,7 +320,7 @@
         .hero-title em { font-style: italic; color: var(--gold-light); }
 
         .hero-subtitle {
-            font-size: 0.65rem;
+            font-size: 0.75rem;
             letter-spacing: 0.3em;
             text-transform: uppercase;
             color: rgba(237, 229, 216, 0.45);
@@ -335,7 +343,7 @@
         .btn {
             display: inline-block;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.62rem;
+            font-size: 0.75rem;
             font-weight: 400;
             letter-spacing: 0.28em;
             text-transform: uppercase;
@@ -1026,11 +1034,17 @@
 
 <!-- ═══ HERO ════════════════════════════════════════════ -->
 <section id="hero">
-    <div class="hero-bg"></div>
+    <img class="hero-bg-img"
+         src="Pottery%202026%20Website%20Photos/DSC_8920.jpeg"
+         alt="Dark green handmade crystalline pottery vase with speckled glaze by Brandon Franks"
+         fetchpriority="high"
+         decoding="async"
+         width="2400"
+         height="1600">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <p class="hero-eyebrow">Crystalline Ceramics</p>
-        <h1 class="hero-title">Brandon Franks<br><em>Pottery</em></h1>
+        <h1 class="hero-title">Brandon Franks <em>Pottery</em></h1>
         <p class="hero-subtitle">Handmade Crystalline Pottery</p>
         <div class="hero-buttons">
             <a href="#gallery" class="btn">View Gallery</a>
@@ -1062,7 +1076,9 @@
             <div class="about-img-frame reveal">
                 <img src="Pottery%202026%20Website%20Photos/IMG_0025.JPG"
                      alt="Large handmade gourd-shaped ceramic vase covered in tan and blue zinc silicate crystalline glaze by Brandon Franks"
-                     loading="lazy">
+                     loading="lazy"
+                     width="1200"
+                     height="1600">
             </div>
             <div class="about-content">
                 <div class="section-header reveal">
@@ -1071,10 +1087,10 @@
                     <div class="section-rule"></div>
                 </div>
                 <div class="about-body reveal">
-                    <p>My name is Brandon Franks, and I am a pottery artist specializing in crystalline glazes, some of the rarest and most technically demanding forms of ceramics.</p>
-                    <p>I started throwing pottery when I was nine years old. Even then, I was drawn to the quiet rhythm of working with clay and the way something pulled from the earth could become beautiful and functional in a single afternoon. I began selling my work in 2017, and by 2019 I had fully committed to crystalline glazing. It has shaped everything I have made since.</p>
-                    <p>Crystalline work keeps me humble. It requires constant testing, refining glaze formulas, adjusting firing schedules, and learning how to guide chemistry that never behaves the same way twice. It has taught me patience, precision, and respect for the unexpected. Some of the most striking results are the ones that emerge just beyond what I thought I was aiming for.</p>
-                    <p>Each piece that leaves my studio is completely unique. It has never existed before, and it never will again.</p>
+                    <p>My name is Brandon Franks. I am a ceramic artist specializing in crystalline glazes — some of the rarest and most technically demanding surfaces in all of ceramics.</p>
+                    <p>I began throwing pottery at age nine, drawn early to the quiet discipline of working with clay and the way raw earth could become something beautiful in a single afternoon. I started selling my work in 2017, and by 2019 had focused entirely on crystalline glazing — a discipline that has shaped everything I've made since.</p>
+                    <p>Crystalline work demands constant experimentation: new glaze formulas, new firing schedules, new ways to coax unpredictable chemistry into something intentional. It has taught me that patience and precision are inseparable, and that the most beautiful outcomes are often the ones you didn't fully plan.</p>
+                    <p>Every piece leaves my studio as something that has never existed before and will never exist again.</p>
                 </div>
             </div>
         </div>
@@ -1100,17 +1116,17 @@
             <div class="step-card reveal">
                 <span class="step-num">01</span>
                 <h3 class="step-title">The Glaze Formula</h3>
-                <p class="step-body">A crystalline glaze is built around zinc oxide and silica — the two ingredients that, under the right conditions, will bond together and grow into zinc silicate crystals. Metal oxides are added to produce color: cobalt for blues, iron for ambers and greens, copper for turquoise. Every new color needs a new formula. The chemistry has to be exactly right, or the crystals simply won't form.</p>
+                <p class="step-body">Crystalline glaze begins with zinc oxide and silica. When everything is balanced just right, those two materials bond and grow into zinc silicate crystals. Color comes from metal oxides added in small, careful amounts. Cobalt creates blues, iron brings ambers and greens, copper leans toward turquoise. Each color requires its own formula. There is no universal recipe. The chemistry has to be exact. If it is even slightly off, the crystals will not grow at all.</p>
             </div>
             <div class="step-card reveal">
                 <span class="step-num">02</span>
                 <h3 class="step-title">The Firing</h3>
-                <p class="step-body">The kiln climbs past 2,300°F, melting the glaze into a liquid. Then begins the most critical phase: a slow, precisely guided descent. The temperature is held at specific points — sometimes for four hours at a stretch — giving the zinc silicate molecules time to find each other and crystallize. A deviation of just a few degrees in either direction can mean no crystals at all, or a result no one intended. Each firing runs 12 to 18 hours.</p>
+                <p class="step-body">The kiln climbs past 2,300°F, turning the glaze into a molten liquid. That is only the beginning. What matters most is what happens next. The temperature is slowly lowered and then held at very specific points, sometimes for hours at a time. This gives the zinc silicate molecules space to move, connect, and form crystals. A shift of only a few degrees can change everything. Too hot or too cool, and the crystals may not develop. Or they may grow in ways no one expected. Each firing takes between twelve and eighteen hours, and there is no rushing it.</p>
             </div>
             <div class="step-card reveal">
                 <span class="step-num">03</span>
                 <h3 class="step-title">The Finish</h3>
-                <p class="step-body">Crystalline glaze is so fluid at peak temperature that it runs off the piece entirely if not contained. Every pot is fired inside a handmade catch basin to collect the overflow. After the kiln cools, that base is cut away with a diamond wheel and ground smooth by hand. What remains is a surface that grew in the dark of the kiln — crystals that can span several inches, with radial structures visible under magnification. No two are ever alike.</p>
+                <p class="step-body">At peak temperature, crystalline glaze becomes so fluid that it would run straight off the pot if left alone. Every piece is fired inside a handmade catch basin that collects the excess glaze as it flows. After the kiln cools, that basin is carefully cut away with a diamond wheel and the base is ground smooth by hand. What remains is the surface that formed inside the kiln. The crystals can stretch several inches across, with intricate radial patterns that become even more striking up close. No two pieces ever come out the same.</p>
             </div>
         </div>
 
@@ -1118,7 +1134,9 @@
             <div class="cf-image">
                 <img src="Pottery%202026%20Website%20Photos/IMG_4952.jpeg"
                      alt="Handmade teardrop-shaped ceramic vase with dense cobalt blue zinc silicate crystalline glaze by Brandon Franks"
-                     loading="lazy">
+                     loading="lazy"
+                     width="1200"
+                     height="1600">
             </div>
             <div class="cf-text">
                 <div>
@@ -1164,17 +1182,17 @@
             <article class="blog-card reveal">
                 <h3 class="blog-card-title">What is Crystalline Pottery</h3>
                 <p class="blog-card-excerpt">Crystalline pottery is one of the rarest and most technically demanding forms of ceramic art — a discipline where chemistry, fire, and patience converge to grow real zinc silicate crystals inside the glaze. Unlike most pottery glazes, which dry to a uniform surface, crystalline glazes form macrocrystalline structures that can span several inches across a single piece.</p>
-                <a href="blog/what-is-crystalline-pottery.html" class="blog-read-more">Read More</a>
+                <a href="blog/what-is-crystalline-pottery.html" class="blog-read-more">Read: What is Crystalline Pottery</a>
             </article>
             <article class="blog-card reveal">
                 <h3 class="blog-card-title">Inside the Cone 8 Firing Process</h3>
                 <p class="blog-card-excerpt">Every crystalline piece I make goes through a precisely controlled Cone 8 firing — a 12 to 18 hour process where temperature is everything. The climb to peak heat melts the glaze into a liquid flux, and then the real work begins: a slow, deliberate descent through the crystal-growth window, held for hours at temperatures only a few degrees wide.</p>
-                <a href="blog/cone-8-firing-process.html" class="blog-read-more">Read More</a>
+                <a href="blog/cone-8-firing-process.html" class="blog-read-more">Read: Inside the Cone 8 Firing Process</a>
             </article>
             <article class="blog-card reveal">
                 <h3 class="blog-card-title">How Every Crystal Is Unique</h3>
                 <p class="blog-card-excerpt">No two crystalline pots have ever looked the same, and no two ever will. The crystals that grow inside my glazes form through a process governed by chemistry but shaped by chance — the same way snowflakes are identical in structure yet never in pattern. Understanding why requires looking at the microscale events that unfold inside a kiln in the dark.</p>
-                <a href="blog/every-crystal-is-unique.html" class="blog-read-more">Read More</a>
+                <a href="blog/every-crystal-is-unique.html" class="blog-read-more">Read: How Every Crystal Is Unique</a>
             </article>
         </div>
     </div>
@@ -1191,7 +1209,7 @@
             </div>
             <div class="contact-links reveal">
                 <a href="mailto:brandonfrankspottery@gmail.com" class="contact-link">brandonfrankspottery@gmail.com</a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="contact-link">Instagram</a>
+                <a href="https://www.instagram.com/brandonfrankspottery" target="_blank" rel="noopener" class="contact-link">Instagram</a>
             </div>
             <form class="contact-form reveal" id="contactForm">
                 <input type="hidden" name="_replyto"  value="brandonfrankspottery@gmail.com">
@@ -1267,7 +1285,7 @@
         item.className = 'gallery-item reveal';
         item.style.transitionDelay = `${(i % 3) * 80}ms`;
         item.innerHTML = `
-            <img src="${img.src}" alt="${img.alt}" loading="lazy">
+            <img src="${img.src}" alt="${img.alt}" loading="lazy" width="1200" height="1600">
             <div class="gallery-item-overlay">
                 <div class="gallery-zoom-icon">
                     <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
