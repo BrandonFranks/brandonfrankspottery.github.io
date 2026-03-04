@@ -27,11 +27,30 @@
     [
       {
         "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://brandonfrankspottery.com/#website",
+        "name": "Brandon Franks Pottery",
+        "url": "https://brandonfrankspottery.com",
+        "description": "Handmade crystalline pottery by Brandon Franks. Each piece features hand-grown zinc silicate crystals in unique patterns.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://brandonfrankspottery.com/#person",
+          "name": "Brandon Franks"
+        }
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://brandonfrankspottery.com/#person",
         "name": "Brandon Franks",
         "jobTitle": "Ceramic Artist",
         "description": "Brandon Franks is a ceramic artist specializing in crystalline glazes. He began throwing pottery at age 9 and has focused exclusively on crystalline work since 2019.",
         "url": "https://brandonfrankspottery.com",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/DSC_8920.jpeg"
+        },
         "sameAs": ["https://www.etsy.com/shop/BrandonFranksPottery", "https://www.instagram.com/brandonfrankspottery"],
         "knowsAbout": ["Crystalline glazes", "Ceramics", "Zinc silicate crystal formation", "Kiln firing", "Pottery"]
       },
@@ -63,7 +82,8 @@
     <link rel="preload" as="image" href="Pottery%202026%20Website%20Photos/DSC_8920.jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap"></noscript>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }

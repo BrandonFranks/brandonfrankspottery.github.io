@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Notes — Brandon Franks Pottery</title>
+    <meta name="description" content="Essays on crystalline pottery by Brandon Franks — the process, the chemistry, and the craft behind handmade ceramic art.">
+    <link rel="canonical" href="https://brandonfrankspottery.com/blog/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://brandonfrankspottery.com/blog/",
+      "name": "Studio Notes",
+      "description": "Essays on crystalline pottery by Brandon Franks — the process, chemistry, and craft behind handmade ceramic art.",
+      "url": "https://brandonfrankspottery.com/blog/",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://brandonfrankspottery.com/#person",
+        "name": "Brandon Franks",
+        "url": "https://brandonfrankspottery.com"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap"></noscript>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream:  #faf6f0;
+            --brown:  #2C1810;
+            --gold:   #c9a96e;
+            --muted:  #7a5c3a;
+            --rule:   rgba(201,169,110,0.4);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--cream);
+            color: var(--brown);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        /* ─── MASTHEAD ──────────────────────────────── */
+        .blog-masthead {
+            background: var(--cream);
+            border-bottom: 1px solid var(--rule);
+            text-align: center;
+            padding-bottom: 0;
+        }
+
+        .blog-masthead-topnav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3rem;
+            height: 42px;
+        }
+
+        .blog-home-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.25s;
+        }
+        .blog-home-link::before { content: '←'; }
+        .blog-home-link:hover   { color: var(--gold); }
+
+        .blog-site-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        .blog-site-link:hover { color: var(--gold); }
+
+        .masthead-rule { height: 1px; background: var(--gold); }
+
+        .masthead-logo-link {
+            display: block;
+            padding-top: 14px;
+            line-height: 0;
+            text-decoration: none;
+            text-align: center;
+        }
+        .masthead-logo-img { height: 90px; width: auto; display: inline-block; }
+
+        .masthead-wordmark {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: var(--brown);
+            letter-spacing: 4px;
+            text-align: center;
+            padding-bottom: 10px;
+            margin-top: 4px;
+            display: block;
+            text-decoration: none;
+        }
+
+        /* ─── PAGE HEADER ───────────────────────────── */
+        .page-header {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 5rem 2rem 3rem;
+        }
+
+        .page-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 400;
+            color: var(--brown);
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .page-rule {
+            width: 52px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+
+        /* ─── POST LIST ─────────────────────────────── */
+        .post-list {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem 7rem;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .post-list-item {
+            border-bottom: 1px solid var(--rule);
+            padding: 2.5rem 0;
+        }
+        .post-list-item:first-child { padding-top: 0; }
+
+        .post-list-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .post-list-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 400;
+            color: var(--brown);
+            line-height: 1.2;
+            margin-bottom: 0.9rem;
+        }
+
+        .post-list-excerpt {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.83rem;
+            line-height: 1.9;
+            color: #6a4020;
+            font-weight: 300;
+            margin-bottom: 1.25rem;
+        }
+
+        .post-list-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 2px;
+            transition: color 0.25s, border-color 0.25s;
+        }
+        .post-list-link:hover { color: var(--gold); border-color: var(--gold); }
+
+        /* ─── FOOTER ────────────────────────────────── */
+        .blog-footer {
+            background: #0f0604;
+            padding: 2rem 3rem;
+            border-top: 1px solid rgba(201,169,110,0.14);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .blog-footer-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .blog-footer-copy {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(138,128,112,0.4);
+        }
+
+        @media (max-width: 600px) {
+            .blog-masthead-topnav { padding: 0 1.5rem; }
+            .masthead-wordmark    { font-size: 24px; }
+            .blog-footer          { flex-direction: column; text-align: center; padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="blog-masthead">
+    <div class="blog-masthead-topnav">
+        <a href="https://brandonfrankspottery.com/" class="blog-home-link">Home</a>
+        <a href="https://brandonfrankspottery.com/" class="blog-site-link">brandonfrankspottery.com</a>
+    </div>
+    <div class="masthead-rule"></div>
+    <a href="https://brandonfrankspottery.com/" class="masthead-logo-link">
+        <img src="../Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
+             alt="Brandon Franks Pottery"
+             class="masthead-logo-img">
+    </a>
+    <a href="https://brandonfrankspottery.com/" class="masthead-wordmark">Brandon Franks Pottery</a>
+    <div class="masthead-rule"></div>
+</header>
+
+<div class="page-header">
+    <span class="page-tag">Studio Notes</span>
+    <h1 class="page-title">From the Studio</h1>
+    <div class="page-rule"></div>
+</div>
+
+<main>
+    <ul class="post-list">
+        <li class="post-list-item">
+            <span class="post-list-date">January 15, 2026</span>
+            <h2 class="post-list-title">What is Crystalline Pottery?</h2>
+            <p class="post-list-excerpt">Crystalline pottery is one of the rarest and most technically demanding forms of ceramic art — a discipline where chemistry, fire, and patience converge to grow real zinc silicate crystals inside the glaze. Unlike most pottery glazes, which dry to a uniform surface, crystalline glazes form macrocrystalline structures that can span several inches across a single piece.</p>
+            <a href="what-is-crystalline-pottery.html" class="post-list-link">Read more</a>
+        </li>
+        <li class="post-list-item">
+            <span class="post-list-date">February 3, 2026</span>
+            <h2 class="post-list-title">Inside the Cone 8 Firing Process</h2>
+            <p class="post-list-excerpt">Every crystalline piece I make goes through a precisely controlled Cone 8 firing — a 12 to 18 hour process where temperature is everything. The climb to peak heat melts the glaze into a liquid flux, and then the real work begins: a slow, deliberate descent through the crystal-growth window, held for hours at temperatures only a few degrees wide.</p>
+            <a href="cone-8-firing-process.html" class="post-list-link">Read more</a>
+        </li>
+        <li class="post-list-item">
+            <span class="post-list-date">February 20, 2026</span>
+            <h2 class="post-list-title">How Every Crystal Is Unique</h2>
+            <p class="post-list-excerpt">No two crystalline pots have ever looked the same, and no two ever will. The crystals that grow inside my glazes form through a process governed by chemistry but shaped by chance — the same way snowflakes are identical in structure yet never in pattern.</p>
+            <a href="every-crystal-is-unique.html" class="post-list-link">Read more</a>
+        </li>
+    </ul>
+</main>
+
+<footer class="blog-footer">
+    <span class="blog-footer-brand">Brandon Franks Pottery</span>
+    <span class="blog-footer-copy">&copy; 2026 All Rights Reserved</span>
+</footer>
+
+</body>
+</html>

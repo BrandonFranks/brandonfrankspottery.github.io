@@ -1,39 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://brandonfrankspottery.com/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://brandonfrankspottery.com</loc>
+    <lastmod>2026-03-04</lastmod>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/DSC_8920.jpeg</image:loc>
+      <image:caption>Dark green handmade crystalline pottery vase with speckled glaze, photographed with candlelight by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/DSC_7694.JPG</image:loc>
+      <image:caption>Handmade ceramic mug with olive green crystalline glaze and dark dripping rim by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/IMG_0025.JPG</image:loc>
+      <image:caption>Large handmade gourd-shaped ceramic vase covered in tan and blue zinc silicate crystalline glaze by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/IMG_2264.jpeg</image:loc>
+      <image:caption>Handmade round ceramic vase with pale blue crystalline glaze held against a garden background by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/IMG_2430.jpeg</image:loc>
+      <image:caption>Handmade spherical ceramic vase with amber and silver crystalline glaze by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/IMG_3269.jpeg</image:loc>
+      <image:caption>Handmade oval ceramic vase with deep red base glaze and large lavender blue crystalline formations by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/IMG_3972.jpeg</image:loc>
+      <image:caption>Handmade ceramic vase with sage green crystalline glaze held over grass by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/IMG_4952.jpeg</image:loc>
+      <image:caption>Handmade teardrop-shaped ceramic vase with dense cobalt blue zinc silicate crystalline glaze by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/00779B48-C1F4-487C-9816-7CE34893B0F3.jpg</image:loc>
+      <image:caption>Handmade red stoneware pottery vessel with bold black brushed glaze held against green grass by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/0613DADE-2D44-4BD3-A711-7F2908659C21.jpg</image:loc>
+      <image:caption>Two stacked handmade celadon ceramic vessels with vivid blue crystalline glaze formations by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/0CE20761-83A9-4F1C-9492-3A43A94ECBB3.jpg</image:loc>
+      <image:caption>Handmade dark stoneware ceramic vase with dramatic white glaze splash held against green grass by Brandon Franks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/12E880F9-0F96-4218-8F2E-7066842C3986.jpg</image:loc>
+      <image:caption>Handmade elongated ceramic vase with emerald green crystalline glaze held against sunlit grass by Brandon Franks</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://brandonfrankspottery.com/blog/</loc>
+    <lastmod>2026-03-04</lastmod>
   </url>
 
   <url>
     <loc>https://brandonfrankspottery.com/blog/what-is-crystalline-pottery.html</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-03-04</lastmod>
   </url>
 
   <url>
     <loc>https://brandonfrankspottery.com/blog/cone-8-firing-process.html</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-03-04</lastmod>
   </url>
 
   <url>
     <loc>https://brandonfrankspottery.com/blog/every-crystal-is-unique.html</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://brandonfrankspottery.com/privacy-policy.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-03-04</lastmod>
   </url>
 
 </urlset>

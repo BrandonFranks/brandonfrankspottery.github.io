@@ -12,17 +12,35 @@
       "@type": "BlogPosting",
       "headline": "What is Crystalline Pottery?",
       "datePublished": "2026-01-15",
-      "dateModified": "2026-01-15",
-      "author": { "@type": "Person", "name": "Brandon Franks", "url": "https://brandonfrankspottery.com" },
-      "publisher": { "@type": "Organization", "name": "Brandon Franks Pottery", "url": "https://brandonfrankspottery.com" },
+      "dateModified": "2026-03-04",
+      "author": { "@type": "Person", "@id": "https://brandonfrankspottery.com/#person", "name": "Brandon Franks", "url": "https://brandonfrankspottery.com" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Brandon Franks Pottery",
+        "url": "https://brandonfrankspottery.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png",
+          "width": 300,
+          "height": 300
+        }
+      },
       "url": "https://brandonfrankspottery.com/blog/what-is-crystalline-pottery.html",
-      "image": "https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/DSC_8920.jpeg",
-      "description": "An introduction to crystalline pottery — what it is, how the crystals form, and why this rare technique is one of the most demanding in ceramics."
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://brandonfrankspottery.com/blog/what-is-crystalline-pottery.html" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://brandonfrankspottery.com/Pottery%202026%20Website%20Photos/DSC_8920.jpeg",
+        "width": 2400,
+        "height": 1600
+      },
+      "description": "An introduction to crystalline pottery — what it is, how the crystals form, and why this rare technique is one of the most demanding in ceramics.",
+      "isPartOf": { "@type": "Blog", "@id": "https://brandonfrankspottery.com/blog/", "name": "Studio Notes" }
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap"></noscript>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -209,22 +227,84 @@
             .masthead-wordmark    { font-size: 24px; }
             .blog-footer          { flex-direction: column; text-align: center; padding: 1.5rem; }
         }
+
+        /* ─── RELATED POSTS ─────────────────────────────── */
+        .related-posts {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+            border-top: 1px solid var(--rule);
+        }
+        .related-posts-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        .related-posts-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .related-posts-list a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--brown);
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--rule);
+            display: block;
+            transition: color 0.25s;
+        }
+        .related-posts-list a:hover { color: var(--gold); }
+
+        /* ─── AUTHOR BIO ─────────────────────────────────── */
+        .author-bio {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--rule);
+        }
+        .author-bio-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        .author-bio-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--brown);
+            margin-bottom: 0.7rem;
+            display: block;
+        }
+        .author-bio-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.83rem;
+            line-height: 1.9;
+            color: #6a4020;
+            font-weight: 300;
+        }
+        .author-bio-text a { color: var(--brown); text-decoration: underline; text-underline-offset: 3px; transition: color 0.25s; }
+        .author-bio-text a:hover { color: var(--gold); }
     </style>
 </head>
 <body>
 
 <header class="blog-masthead">
     <div class="blog-masthead-topnav">
-        <a href="../blog" class="blog-back">All Posts</a>
-        <a href="../index.html" class="blog-site-link">brandonfrankspottery.com</a>
+        <a href="../blog/" class="blog-back">All Posts</a>
+        <a href="https://brandonfrankspottery.com/" class="blog-site-link">brandonfrankspottery.com</a>
     </div>
     <div class="masthead-rule"></div>
-    <a href="../index.html" class="masthead-logo-link">
+    <a href="https://brandonfrankspottery.com/" class="masthead-logo-link">
         <img src="../Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
              alt="Brandon Franks Pottery"
              class="masthead-logo-img">
     </a>
-    <a href="../index.html" class="masthead-wordmark">Brandon Franks Pottery</a>
+    <a href="https://brandonfrankspottery.com/" class="masthead-wordmark">Brandon Franks Pottery</a>
     <div class="masthead-rule"></div>
 </header>
 
@@ -243,6 +323,22 @@
         <p>I started working with crystalline glazes in 2019 after years of throwing more conventional stoneware. The first successful firing changed the direction of everything. There is nothing else in ceramics quite like pulling a piece from a kiln and seeing formations you couldn't have drawn or planned — growth that happened in the dark, over twelve hours, without your hands. It is the part of this work I find most honest: you prepare everything you can, and then the kiln decides.</p>
     </div>
 </main>
+
+<!-- ─── RELATED POSTS ─── -->
+<nav class="related-posts" aria-label="Related posts">
+    <p class="related-posts-label">More from the Studio</p>
+    <ul class="related-posts-list">
+        <li><a href="cone-8-firing-process.html">Inside the Cone 8 Firing Process</a></li>
+        <li><a href="every-crystal-is-unique.html">How Every Crystal Is Unique</a></li>
+    </ul>
+</nav>
+
+<!-- ─── AUTHOR BIO ─── -->
+<aside class="author-bio">
+    <p class="author-bio-label">About the Author</p>
+    <span class="author-bio-name">Brandon Franks</span>
+    <p class="author-bio-text">Brandon Franks is a ceramic artist specializing in crystalline glazes — one of the rarest and most technically demanding disciplines in ceramics. He began throwing pottery at age nine and has focused exclusively on crystalline work since 2019. His work is available through his <a href="https://www.etsy.com/shop/BrandonFranksPottery" target="_blank" rel="noopener noreferrer">Etsy shop</a> and on <a href="https://www.instagram.com/brandonfrankspottery" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
+</aside>
 
 <footer class="blog-footer">
     <span class="blog-footer-brand">Brandon Franks Pottery</span>
