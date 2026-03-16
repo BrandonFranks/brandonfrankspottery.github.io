@@ -1,0 +1,12 @@
+*
+!.gitignore
+!CNAME
+!deploy.sh
+!index.html
+!sitemap.xml
+!robots.txt
+!privacy-policy.html
+!blog/
+!blog/**
+!Pottery 2026 Website Photos/
+!Pottery 2026 Website Photos/**
