@@ -309,18 +309,6 @@
             padding: 2rem 4rem 2rem 1.5rem;
         }
 
-        .hero-eyebrow {
-            font-size: 0.6rem;
-            font-weight: 400;
-            letter-spacing: 0.5em;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 1.8rem;
-            opacity: 0;
-            transform: translateY(12px);
-            animation: heroEyebrowIn 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s forwards;
-        }
-
         .hero-title {
             font-family: 'Playfair Display', serif;
             font-size: clamp(4rem, 9vw, 7.5rem);
@@ -988,10 +976,6 @@
         @keyframes fadeUp  { to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeIn  { to { opacity: 1; } }
 
-        @keyframes heroEyebrowIn {
-            from { opacity: 0; transform: translateY(12px); letter-spacing: 0.75em; }
-            to   { opacity: 1; transform: translateY(0);    letter-spacing: 0.5em;  }
-        }
         @keyframes linePulse {
             0%, 100% { opacity: 0.5; transform: scaleY(1); }
             50%       { opacity: 1;   transform: scaleY(1.15); }
@@ -1120,7 +1104,6 @@
     </picture>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <p class="hero-eyebrow">Crystalline Ceramics</p>
         <h1 class="hero-title">Brandon Franks <em>Pottery</em></h1>
         <p class="hero-subtitle">Handmade Crystalline Pottery</p>
         <div class="hero-buttons">
