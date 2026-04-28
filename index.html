@@ -79,7 +79,7 @@
 
     <meta name="p:domain_verify" content="7003c34787848a610fcc9a9c0a400680"/>
 
-    <link rel="preload" as="image" href="Pottery%202026%20Website%20Photos/DSC_8920.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="Pottery%202026%20Website%20Photos/webp/DSC_8920.webp" type="image/webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -1054,9 +1054,14 @@
     <div class="masthead-rule"></div>
     <div class="masthead-identity">
         <a href="#hero" class="masthead-logo-link">
-            <img src="Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
-                 alt="Brandon Franks Pottery"
-                 class="masthead-logo-img">
+            <picture style="display:contents">
+                <source srcset="Pottery%202026%20Website%20Photos/webp/BrandonFranksLogoColor.webp" type="image/webp">
+                <img src="Pottery%202026%20Website%20Photos/BrandonFranksLogoColor.png"
+                     alt="Brandon Franks Pottery"
+                     class="masthead-logo-img"
+                     width="1024"
+                     height="1024">
+            </picture>
         </a>
         <a href="#hero" class="masthead-wordmark">Brandon Franks Pottery</a>
     </div>
@@ -1092,13 +1097,16 @@
 
 <!-- ═══ HERO ════════════════════════════════════════════ -->
 <section id="hero">
-    <img class="hero-bg-img"
-         src="Pottery%202026%20Website%20Photos/DSC_8920.jpeg"
-         alt="Dark green handmade crystalline pottery vase with speckled glaze by Brandon Franks"
-         fetchpriority="high"
-         decoding="async"
-         width="2400"
-         height="1600">
+    <picture style="display:contents">
+        <source srcset="Pottery%202026%20Website%20Photos/webp/DSC_8920.webp" type="image/webp">
+        <img class="hero-bg-img"
+             src="Pottery%202026%20Website%20Photos/DSC_8920.jpeg"
+             alt="Dark green handmade crystalline pottery vase with speckled glaze by Brandon Franks"
+             fetchpriority="high"
+             decoding="async"
+             width="3650"
+             height="3712">
+    </picture>
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <p class="hero-eyebrow">Crystalline Ceramics</p>
@@ -1132,11 +1140,14 @@
     <div class="container">
         <div class="about-grid">
             <div class="about-img-frame reveal">
-                <img src="Pottery%202026%20Website%20Photos/IMG_0025.JPG"
-                     alt="Large handmade gourd-shaped ceramic vase covered in tan and blue zinc silicate crystalline glaze by Brandon Franks"
-                     loading="lazy"
-                     width="1200"
-                     height="1600">
+                <picture style="display:contents">
+                    <source srcset="Pottery%202026%20Website%20Photos/webp/IMG_0025.webp" type="image/webp">
+                    <img src="Pottery%202026%20Website%20Photos/IMG_0025.JPG"
+                         alt="Large handmade gourd-shaped ceramic vase covered in tan and blue zinc silicate crystalline glaze by Brandon Franks"
+                         loading="lazy"
+                         width="4003"
+                         height="5997">
+                </picture>
             </div>
             <div class="about-content">
                 <div class="section-header reveal">
@@ -1190,11 +1201,14 @@
 
         <div class="crystalline-feature reveal">
             <div class="cf-image">
-                <img src="Pottery%202026%20Website%20Photos/IMG_4952.jpeg"
-                     alt="Handmade teardrop-shaped ceramic vase with dense cobalt blue zinc silicate crystalline glaze by Brandon Franks"
-                     loading="lazy"
-                     width="1200"
-                     height="1600">
+                <picture style="display:contents">
+                    <source srcset="Pottery%202026%20Website%20Photos/webp/IMG_4952.webp" type="image/webp">
+                    <img src="Pottery%202026%20Website%20Photos/IMG_4952.jpeg"
+                         alt="Handmade teardrop-shaped ceramic vase with dense cobalt blue zinc silicate crystalline glaze by Brandon Franks"
+                         loading="lazy"
+                         width="3024"
+                         height="4032">
+                </picture>
             </div>
             <div class="cf-text">
                 <div>
@@ -1324,7 +1338,10 @@
     <button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button>
     <button class="lb-btn lb-prev"  id="lbPrev"  aria-label="Previous">&#8249;</button>
     <div class="lightbox-img-wrap">
-        <img src="" alt="" id="lbImg">
+        <picture>
+            <source srcset="" type="image/webp" id="lbWebpSource">
+            <img src="" alt="" id="lbImg">
+        </picture>
     </div>
     <button class="lb-btn lb-next"  id="lbNext"  aria-label="Next">&#8250;</button>
     <span class="lb-counter" id="lbCounter"></span>
@@ -1332,32 +1349,33 @@
 
 <script>
     /* ─── GALLERY DATA ──────────────────────────────── */
+    const P = 'Pottery%202026%20Website%20Photos/';
     const IMAGES = [
-        { src: "Pottery%202026%20Website%20Photos/DSC_7694.JPG",                             alt: "Handmade ceramic mug with olive green crystalline glaze and dark dripping rim by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/DSC_8920.jpeg",                            alt: "Dark green handmade crystalline pottery vase with speckled glaze, photographed with candlelight by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_0025.JPG",                             alt: "Large handmade gourd-shaped ceramic vase covered in tan and blue zinc silicate crystalline glaze by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_2264.jpeg",                            alt: "Handmade round ceramic vase with pale blue crystalline glaze held against a garden background by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_2430.jpeg",                            alt: "Handmade spherical ceramic vase with amber and silver crystalline glaze by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_3269.jpeg",                            alt: "Handmade oval ceramic vase with deep red base glaze and large lavender blue crystalline formations by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_3972.jpeg",                            alt: "Handmade ceramic vase with sage green crystalline glaze held over grass by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_4952.jpeg",                            alt: "Handmade teardrop-shaped ceramic vase with dense cobalt blue zinc silicate crystalline glaze by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/00779B48-C1F4-487C-9816-7CE34893B0F3.jpg", alt: "Handmade red stoneware pottery vessel with bold black brushed glaze held against green grass by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/0613DADE-2D44-4BD3-A711-7F2908659C21.jpg", alt: "Two stacked handmade celadon ceramic vessels with vivid blue crystalline glaze formations by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/0CE20761-83A9-4F1C-9492-3A43A94ECBB3.jpg", alt: "Handmade dark stoneware ceramic vase with dramatic white glaze splash held against green grass by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/12E880F9-0F96-4218-8F2E-7066842C3986.jpg", alt: "Handmade elongated ceramic vase with emerald green crystalline glaze held against sunlit grass by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_5779.jpeg", alt: "Handmade gourd-shaped ceramic vessel with vibrant blue crystalline glaze held against sunlit grass by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_5784.jpeg", alt: "Handmade flat teardrop ceramic vessel with dark matte glaze and subtle crystalline formations held against green grass by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_5788.jpeg", alt: "Handmade flat teardrop ceramic vessel with celadon green glaze and small circular crystalline formations by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_5800.jpeg", alt: "Handmade double-bulge gourd ceramic vessel with smooth sage green glaze held against garden foliage by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_5808.jpeg", alt: "Handmade teardrop ceramic vessel with sandy tan glaze and scattered blue crystalline formations by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_6061.jpeg", alt: "Handmade ceramic cup with blue and white crystalline stripe glaze photographed inside the kiln by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_6235.jpeg", alt: "Handmade barrel-shaped ceramic vessel densely covered in vivid blue zinc silicate crystalline formations by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_6239.jpeg", alt: "Handmade curved ceramic vessel with intense cobalt blue crystalline glaze held outdoors by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_6248.jpeg", alt: "Handmade ceramic mug with cream glaze and subtle white crystalline patterns and a looped handle by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/EEBF342A-79FD-4551-BE7E-5382C6F11462.jpg", alt: "Large egg-shaped handmade ceramic vessel with all-white crystalline glaze covered in overlapping circular crystal formations by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_2649.jpeg", alt: "Flat lens-shaped handmade ceramic vessel with celadon and white crystalline lace formations transitioning to deep green crystals, studio photograph by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_2655.jpeg", alt: "Flat lens-shaped handmade ceramic vessel with teal and blue-green base glaze and large olive green crystalline formations, studio photograph by Brandon Franks" },
-        { src: "Pottery%202026%20Website%20Photos/IMG_2755.jpeg", alt: "Spherical handmade ceramic vessel with deep forest green and teal glaze covered in large white botanical crystalline formations, studio photograph by Brandon Franks" },
+        { src: P+'DSC_7694.JPG',   webp: P+'webp/DSC_7694.webp',   thumb: P+'thumbs/DSC_7694.webp',   w:800, h:864,  alt: "Handmade ceramic mug with olive green crystalline glaze and dark dripping rim by Brandon Franks" },
+        { src: P+'DSC_8920.jpeg',  webp: P+'webp/DSC_8920.webp',   thumb: P+'thumbs/DSC_8920.webp',   w:800, h:813,  alt: "Dark green handmade crystalline pottery vase with speckled glaze, photographed with candlelight by Brandon Franks" },
+        { src: P+'IMG_0025.JPG',   webp: P+'webp/IMG_0025.webp',   thumb: P+'thumbs/IMG_0025.webp',   w:800, h:1198, alt: "Large handmade gourd-shaped ceramic vase covered in tan and blue zinc silicate crystalline glaze by Brandon Franks" },
+        { src: P+'IMG_2264.jpeg',  webp: P+'webp/IMG_2264.webp',   thumb: P+'thumbs/IMG_2264.webp',   w:800, h:1066, alt: "Handmade round ceramic vase with pale blue crystalline glaze held against a garden background by Brandon Franks" },
+        { src: P+'IMG_2430.jpeg',  webp: P+'webp/IMG_2430.webp',   thumb: P+'thumbs/IMG_2430.webp',   w:800, h:1066, alt: "Handmade spherical ceramic vase with amber and silver crystalline glaze by Brandon Franks" },
+        { src: P+'IMG_3269.jpeg',  webp: P+'webp/IMG_3269.webp',   thumb: P+'thumbs/IMG_3269.webp',   w:800, h:1134, alt: "Handmade oval ceramic vase with deep red base glaze and large lavender blue crystalline formations by Brandon Franks" },
+        { src: P+'IMG_3972.jpeg',  webp: P+'webp/IMG_3972.webp',   thumb: P+'thumbs/IMG_3972.webp',   w:800, h:1066, alt: "Handmade ceramic vase with sage green crystalline glaze held over grass by Brandon Franks" },
+        { src: P+'IMG_4952.jpeg',  webp: P+'webp/IMG_4952.webp',   thumb: P+'thumbs/IMG_4952.webp',   w:800, h:1066, alt: "Handmade teardrop-shaped ceramic vase with dense cobalt blue zinc silicate crystalline glaze by Brandon Franks" },
+        { src: P+'00779B48-C1F4-487C-9816-7CE34893B0F3.jpg', webp: P+'webp/00779B48-C1F4-487C-9816-7CE34893B0F3.webp', thumb: P+'thumbs/00779B48-C1F4-487C-9816-7CE34893B0F3.webp', w:800, h:1000, alt: "Handmade red stoneware pottery vessel with bold black brushed glaze held against green grass by Brandon Franks" },
+        { src: P+'0613DADE-2D44-4BD3-A711-7F2908659C21.jpg', webp: P+'webp/0613DADE-2D44-4BD3-A711-7F2908659C21.webp', thumb: P+'thumbs/0613DADE-2D44-4BD3-A711-7F2908659C21.webp', w:800, h:890,  alt: "Two stacked handmade celadon ceramic vessels with vivid blue crystalline glaze formations by Brandon Franks" },
+        { src: P+'0CE20761-83A9-4F1C-9492-3A43A94ECBB3.jpg', webp: P+'webp/0CE20761-83A9-4F1C-9492-3A43A94ECBB3.webp', thumb: P+'thumbs/0CE20761-83A9-4F1C-9492-3A43A94ECBB3.webp', w:800, h:1000, alt: "Handmade dark stoneware ceramic vase with dramatic white glaze splash held against green grass by Brandon Franks" },
+        { src: P+'12E880F9-0F96-4218-8F2E-7066842C3986.jpg', webp: P+'webp/12E880F9-0F96-4218-8F2E-7066842C3986.webp', thumb: P+'thumbs/12E880F9-0F96-4218-8F2E-7066842C3986.webp', w:800, h:1000, alt: "Handmade elongated ceramic vase with emerald green crystalline glaze held against sunlit grass by Brandon Franks" },
+        { src: P+'IMG_5779.jpeg',  webp: P+'webp/IMG_5779.webp',   thumb: P+'thumbs/IMG_5779.webp',   w:800, h:1066, alt: "Handmade gourd-shaped ceramic vessel with vibrant blue crystalline glaze held against sunlit grass by Brandon Franks" },
+        { src: P+'IMG_5784.jpeg',  webp: P+'webp/IMG_5784.webp',   thumb: P+'thumbs/IMG_5784.webp',   w:800, h:1066, alt: "Handmade flat teardrop ceramic vessel with dark matte glaze and subtle crystalline formations held against green grass by Brandon Franks" },
+        { src: P+'IMG_5788.jpeg',  webp: P+'webp/IMG_5788.webp',   thumb: P+'thumbs/IMG_5788.webp',   w:800, h:1066, alt: "Handmade flat teardrop ceramic vessel with celadon green glaze and small circular crystalline formations by Brandon Franks" },
+        { src: P+'IMG_5800.jpeg',  webp: P+'webp/IMG_5800.webp',   thumb: P+'thumbs/IMG_5800.webp',   w:800, h:1066, alt: "Handmade double-bulge gourd ceramic vessel with smooth sage green glaze held against garden foliage by Brandon Franks" },
+        { src: P+'IMG_5808.jpeg',  webp: P+'webp/IMG_5808.webp',   thumb: P+'thumbs/IMG_5808.webp',   w:800, h:1066, alt: "Handmade teardrop ceramic vessel with sandy tan glaze and scattered blue crystalline formations by Brandon Franks" },
+        { src: P+'IMG_6061.jpeg',  webp: P+'webp/IMG_6061.webp',   thumb: P+'thumbs/IMG_6061.webp',   w:800, h:1066, alt: "Handmade ceramic cup with blue and white crystalline stripe glaze photographed inside the kiln by Brandon Franks" },
+        { src: P+'IMG_6235.jpeg',  webp: P+'webp/IMG_6235.webp',   thumb: P+'thumbs/IMG_6235.webp',   w:800, h:1066, alt: "Handmade barrel-shaped ceramic vessel densely covered in vivid blue zinc silicate crystalline formations by Brandon Franks" },
+        { src: P+'IMG_6239.jpeg',  webp: P+'webp/IMG_6239.webp',   thumb: P+'thumbs/IMG_6239.webp',   w:800, h:1066, alt: "Handmade curved ceramic vessel with intense cobalt blue crystalline glaze held outdoors by Brandon Franks" },
+        { src: P+'IMG_6248.jpeg',  webp: P+'webp/IMG_6248.webp',   thumb: P+'thumbs/IMG_6248.webp',   w:800, h:1066, alt: "Handmade ceramic mug with cream glaze and subtle white crystalline patterns and a looped handle by Brandon Franks" },
+        { src: P+'EEBF342A-79FD-4551-BE7E-5382C6F11462.jpg', webp: P+'webp/EEBF342A-79FD-4551-BE7E-5382C6F11462.webp', thumb: P+'thumbs/EEBF342A-79FD-4551-BE7E-5382C6F11462.webp', w:800, h:1000, alt: "Large egg-shaped handmade ceramic vessel with all-white crystalline glaze covered in overlapping circular crystal formations by Brandon Franks" },
+        { src: P+'IMG_2649.jpeg',  webp: P+'webp/IMG_2649.webp',   thumb: P+'thumbs/IMG_2649.webp',   w:800, h:1066, alt: "Flat lens-shaped handmade ceramic vessel with celadon and white crystalline lace formations transitioning to deep green crystals, studio photograph by Brandon Franks" },
+        { src: P+'IMG_2655.jpeg',  webp: P+'webp/IMG_2655.webp',   thumb: P+'thumbs/IMG_2655.webp',   w:800, h:1066, alt: "Flat lens-shaped handmade ceramic vessel with teal and blue-green base glaze and large olive green crystalline formations, studio photograph by Brandon Franks" },
+        { src: P+'IMG_2755.jpeg',  webp: P+'webp/IMG_2755.webp',   thumb: P+'thumbs/IMG_2755.webp',   w:800, h:1066, alt: "Spherical handmade ceramic vessel with deep forest green and teal glaze covered in large white botanical crystalline formations, studio photograph by Brandon Franks" },
     ];
 
     /* ─── BUILD GALLERY ─────────────────────────────── */
@@ -1373,7 +1391,10 @@
         item.className = 'gallery-item reveal';
         item.style.transitionDelay = `${(i % 3) * 120}ms`;
         item.innerHTML = `
-            <img src="${img.src}" alt="${img.alt}" loading="lazy" width="1200" height="1600">
+            <picture style="display:contents">
+                <source srcset="${img.thumb}" type="image/webp">
+                <img src="${img.src}" alt="${img.alt}" loading="${i < 4 ? 'eager' : 'lazy'}" width="${img.w}" height="${img.h}">
+            </picture>
             <div class="gallery-item-overlay">
                 <div class="gallery-zoom-icon">
                     <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1396,7 +1417,12 @@
     function showImage() {
         lbImg.classList.add('loading');
         const tmp = new Image();
-        tmp.onload = () => { lbImg.src = IMAGES[currentIdx].src; lbImg.alt = IMAGES[currentIdx].alt; lbImg.classList.remove('loading'); };
+        tmp.onload = () => {
+            document.getElementById('lbWebpSource').srcset = IMAGES[currentIdx].webp;
+            lbImg.src = IMAGES[currentIdx].src;
+            lbImg.alt = IMAGES[currentIdx].alt;
+            lbImg.classList.remove('loading');
+        };
         tmp.src = IMAGES[currentIdx].src;
         lbCounter.textContent = `${currentIdx + 1} / ${IMAGES.length}`;
     }
