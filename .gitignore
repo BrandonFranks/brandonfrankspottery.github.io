@@ -10,3 +10,6 @@
 !blog/**
 !Pottery 2026 Website Photos/
 !Pottery 2026 Website Photos/**
+!pottery_upload.py
+!.env.example
+!pinterest_log.json
