@@ -287,8 +287,8 @@
             height: 100%;
             object-fit: cover;
             object-position: center 40%;
-            transform: scale(1.08);
-            transition: transform 10s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: scale(1.06);
+            transition: transform 16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         #hero.loaded .hero-bg-img { transform: scale(1.0); }
@@ -321,8 +321,8 @@
             color: var(--gold);
             margin-bottom: 1.8rem;
             opacity: 0;
-            transform: translateY(18px);
-            animation: fadeUp 1.1s ease 0.4s forwards;
+            transform: translateY(12px);
+            animation: heroEyebrowIn 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s forwards;
         }
 
         .hero-title {
@@ -334,8 +334,9 @@
             color: var(--text);
             margin-bottom: 1.6rem;
             opacity: 0;
-            transform: translateY(18px);
-            animation: fadeUp 1.1s ease 0.7s forwards;
+            transform: translateY(30px);
+            filter: blur(6px);
+            animation: heroTitleIn 1.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.85s forwards;
         }
 
         .hero-title em { font-style: italic; color: var(--gold-light); }
@@ -348,7 +349,7 @@
             margin-bottom: 3.2rem;
             opacity: 0;
             transform: translateY(18px);
-            animation: fadeUp 1.1s ease 1.0s forwards;
+            animation: fadeUp 1.4s cubic-bezier(0.22, 0.61, 0.36, 1) 1.4s forwards;
         }
 
         .hero-buttons {
@@ -358,7 +359,7 @@
             justify-content: center;
             opacity: 0;
             transform: translateY(18px);
-            animation: fadeUp 1.1s ease 1.3s forwards;
+            animation: fadeUp 1.4s cubic-bezier(0.22, 0.61, 0.36, 1) 1.8s forwards;
         }
 
         .btn {
@@ -391,7 +392,7 @@
             align-items: center;
             gap: 0.8rem;
             opacity: 0;
-            animation: fadeIn 1s ease 2.2s forwards;
+            animation: fadeIn 1.2s ease 2.8s forwards;
         }
 
         .hero-scroll-hint span {
@@ -974,15 +975,33 @@
         /* ─── SCROLL ANIMATIONS ─────────────────────── */
         .reveal {
             opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.75s ease, transform 0.75s ease;
+            transform: translateY(36px);
+            transition: opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+            will-change: opacity, transform;
         }
 
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
+        .gallery-item.reveal {
+            transform: translateY(22px) scale(0.97);
+            transition: opacity 0.95s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 0.95s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        .gallery-item.reveal.visible { transform: translateY(0) scale(1); }
+
         /* ─── KEYFRAMES ─────────────────────────────── */
         @keyframes fadeUp  { to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeIn  { to { opacity: 1; } }
+
+        @keyframes heroEyebrowIn {
+            from { opacity: 0; transform: translateY(12px); letter-spacing: 0.75em; }
+            to   { opacity: 1; transform: translateY(0);    letter-spacing: 0.5em;  }
+        }
+        @keyframes heroTitleIn {
+            from { opacity: 0; transform: translateY(30px); letter-spacing: 0.18em; filter: blur(6px); }
+            to   { opacity: 1; transform: translateY(0);    letter-spacing: 0.04em; filter: blur(0);   }
+        }
 
         @keyframes linePulse {
             0%, 100% { opacity: 0.5; transform: scaleY(1); }
@@ -1220,7 +1239,7 @@
             </div>
             <p class="commissions-body reveal">I have experience working with clients on custom crystalline pottery commissions. Whether you have a specific color, size, or form in mind, I'd love to work with you to create something unique. Reach out and we can discuss what's possible.</p>
             <div class="reveal" style="margin-top: 3rem;">
-                <a href="mailto:brandonfrankswork@gmail.com" class="btn btn-filled">Inquire About a Commission</a>
+                <a href="#contact" class="btn btn-filled">Inquire About a Commission</a>
             </div>
         </div>
     </div>
@@ -1335,6 +1354,10 @@
         { src: "Pottery%202026%20Website%20Photos/IMG_6235.jpeg", alt: "Handmade barrel-shaped ceramic vessel densely covered in vivid blue zinc silicate crystalline formations by Brandon Franks" },
         { src: "Pottery%202026%20Website%20Photos/IMG_6239.jpeg", alt: "Handmade curved ceramic vessel with intense cobalt blue crystalline glaze held outdoors by Brandon Franks" },
         { src: "Pottery%202026%20Website%20Photos/IMG_6248.jpeg", alt: "Handmade ceramic mug with cream glaze and subtle white crystalline patterns and a looped handle by Brandon Franks" },
+        { src: "Pottery%202026%20Website%20Photos/EEBF342A-79FD-4551-BE7E-5382C6F11462.jpg", alt: "Large egg-shaped handmade ceramic vessel with all-white crystalline glaze covered in overlapping circular crystal formations by Brandon Franks" },
+        { src: "Pottery%202026%20Website%20Photos/IMG_2649.jpeg", alt: "Flat lens-shaped handmade ceramic vessel with celadon and white crystalline lace formations transitioning to deep green crystals, studio photograph by Brandon Franks" },
+        { src: "Pottery%202026%20Website%20Photos/IMG_2655.jpeg", alt: "Flat lens-shaped handmade ceramic vessel with teal and blue-green base glaze and large olive green crystalline formations, studio photograph by Brandon Franks" },
+        { src: "Pottery%202026%20Website%20Photos/IMG_2755.jpeg", alt: "Spherical handmade ceramic vessel with deep forest green and teal glaze covered in large white botanical crystalline formations, studio photograph by Brandon Franks" },
     ];
 
     /* ─── BUILD GALLERY ─────────────────────────────── */
@@ -1343,12 +1366,12 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
         });
-    }, { threshold: 0.07 });
+    }, { threshold: 0.04 });
 
     IMAGES.forEach((img, i) => {
         const item = document.createElement('div');
         item.className = 'gallery-item reveal';
-        item.style.transitionDelay = `${(i % 3) * 80}ms`;
+        item.style.transitionDelay = `${(i % 3) * 120}ms`;
         item.innerHTML = `
             <img src="${img.src}" alt="${img.alt}" loading="lazy" width="1200" height="1600">
             <div class="gallery-item-overlay">
@@ -1423,8 +1446,16 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ─── STAGGER GRID CHILDREN ─────────────────────── */
+    document.querySelectorAll('.steps-grid .step-card').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 140}ms`;
+    });
+    document.querySelectorAll('.blog-grid .blog-card').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 120}ms`;
+    });
 
     /* ─── CONTACT FORM ──────────────────────────────── */
     const contactForm    = document.getElementById('contactForm');
