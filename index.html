@@ -1037,8 +1037,14 @@
         }
 
         @media (max-width: 580px) {
-            .gallery-grid { columns: 1; }
-            .hero-title   { font-size: 3.2rem; }
+            .hero-title { font-size: 3.2rem; }
+            /* keep 2-column gallery — gap/margin tighten to fit small viewports */
+            .gallery-grid { column-gap: 0.5rem; }
+            .gallery-item { margin-bottom: 0.5rem; }
+        }
+
+        @media (max-width: 400px) {
+            .container { padding: 0 0.75rem; }
         }
     </style>
 </head>
